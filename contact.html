@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Csonka Zsigmond">
+    <meta name="description" content="Kapcsolatfelvétel - Aranycsapat emlékhely">
+    <title>Kapcsolat - Aranycsapat</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ARANYCSAPAT</h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="history.html">Történet</a></li>
+                <li><a href="matches.html">Mérkőzések</a></li>
+                <li><a href="calculator.html">Kalkulátor</a></li>
+                <li><a href="contact.html" class="active">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Kapcsolatfelvétel</h2>
+                <p>Ossza meg velünk gondolatait, emlékeket vagy kérdéseit az Aranycsapattal kapcsolatban</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Keresztnév *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Vezetéknév *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail cím *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefonszám</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+36 20 123 4567">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">Születési dátum</label>
+                            <input type="date" id="birthDate" name="birthDate">
+                            <span class="error-message" id="birthDateError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">Érdeklődési terület *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Válasszon...</option>
+                                <option value="history">Történelem</option>
+                                <option value="players">Játékosok</option>
+                                <option value="matches">Mérkőzések</option>
+                                <option value="statistics">Statisztikák</option>
+                                <option value="other">Egyéb</option>
+                            </select>
+                            <span class="error-message" id="interestError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fanLevel">Rajongói szint</label>
+                            <input type="range" id="fanLevel" name="fanLevel" min="1" max="10" value="5">
+                            <div class="range-value">
+                                <span>1</span>
+                                <span class="current-value" id="fanLevelValue">5</span>
+                                <span>10</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Üzenet *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span>Feliratkozom a hírlevelre</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>Elfogadom az adatvédelmi feltételeket *</span>
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Üzenet küldése</button>
+                            <button type="reset" class="btn-secondary">Törlés</button>
+                        </div>
+                    </form>
+
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <h3>Köszönjük az üzenetet!</h3>
+                        <p>Hamarosan válaszolunk megkeresésére.</p>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Elérhetőségek</h3>
+                        <p><strong>E-mail:</strong> info@aranycsapat.hu</p>
+                        <p><strong>Telefon:</strong> +36 1 234 5678</p>
+                        <p><strong>Cím:</strong> 1146 Budapest, Istvánmezei út 3-5.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Nyitvatartás</h3>
+                        <p><strong>Hétfő - Péntek:</strong> 9:00 - 17:00</p>
+                        <p><strong>Hétvége:</strong> Zárva</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aranycsapat</h3>
+                    <p>A magyar labdarúgás aranykora emlékezete</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linkek</h4>
+                    <ul>
+                        <li><a href="history.html">Történet</a></li>
+                        <li><a href="matches.html">Mérkőzések</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kapcsolat</h4>
+                    <ul>
+                        <li><a href="contact.html">Kapcsolatfelvétel</a></li>
+                        <li><a href="calculator.html">Statisztika kalkulátor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aranycsapat Emlékhely. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
