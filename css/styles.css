@@ -132,14 +132,33 @@ nav {
 
 /* Youtube Media  */
 .youtube-media {
-padding: 80px 20px; background-color: green; color: var(--text-light);
+    padding: 80px 20px;
+    background-color: green; 
+    color: var(--text-light);
 }
-.youtube-media h2 { text-align: center; font-size: 3rem; margin-bottom: 2rem; color: var(--secondary-color); }
+
+.youtube-media h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
 .youtube-media .video-wrapper {
     display: flex;
     justify-content: center;
+    width: 100%;           
+    max-width: 900px;      
+    margin: 0 auto;        
 }
 
+.youtube-media .video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;  
+    border: none;
+    border-radius: 12px;   
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
 /* STATISZTIKÁK */
 
 .stats-overview { padding: 80px 20px; background-color: var(--light-bg); color: var(--text-light); }

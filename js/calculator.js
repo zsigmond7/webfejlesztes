@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const goldenTeamPlayers = [
-        { name: 'Kocsis Sándor', goals: 75, matches: 68 },
         { name: 'Puskás Ferenc', goals: 84, matches: 85 },
-        { name: 'Czibor Zoltán', goals: 43, matches: 43 },
-        { name: 'Hidegkuti Nándor', goals: 32, matches: 69 },
-        { name: 'Budai II László', goals: 22, matches: 39 },
-        { name: 'Tóth II Mihály', goals: 6, matches: 37 }
+        { name: 'Kocsis Sándor', goals: 75, matches: 68 },
+        { name: 'Hidegkuti Nándor', goals: 39, matches: 69 },
+        { name: 'Czibor Zoltán', goals: 17, matches: 43 },
+        { name: 'Palotás Péter', goals: 18, matches: 24 },
+        { name: 'Budai II László', goals: 10, matches: 39 },
+        { name: 'Tóth József (Tóth II)', goals: 5, matches: 12 },
+        { name: 'Tóth Mihály', goals: 1, matches: 6 },
+        { name: 'Csordás Lajos', goals: 8, matches: 19 },
+        { name: 'Machos Ferenc', goals: 14, matches: 29 },
+        { name: 'Bozsik József', goals: 11, matches: 101 },
     ];
 
     const calculateBtn = document.getElementById('calculateBtn');
