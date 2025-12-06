@@ -167,7 +167,7 @@ nav {
 .stat-card { background: linear-gradient(135deg, var(--primary-color), #A00D24); padding: 3rem 2rem; border-radius: 10px; text-align: center; transition: var(--transition); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 .stat-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(200, 16, 46, 0.5); }
 .stat-number { font-size: 4rem; font-weight: 700; color: var(--secondary-color); font-family: 'Bebas Neue', cursive; }
-.stat-label { font-size: 1.2rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 2px; }
+.stat-label { font-size: 1.2rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; font-weight: 600; }
 
 /* KIEMELÉSEK */
 
@@ -187,9 +187,9 @@ nav {
 .section-intro { text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 .players-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
 .player-card { background: white; padding: 3rem 2rem; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: var(--transition); position: relative; overflow: hidden; }
-.player-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%); opacity: 0; transition: var(--transition); }
+.player-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: none; opacity: 0; transition: var(--transition); }
 .player-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
-.player-card:hover::before { opacity: 0.1; }
+.player-card:hover::before { opacity: 0; }
 .player-number { font-size: 5rem; font-weight: 700; color: var(--primary-color); font-family: 'Bebas Neue', cursive; opacity: 0.2; position: relative; }
 .player-card h3 { font-size: 1.8rem; margin: 1rem 0 0.5rem; color: var(--text-dark); position: relative; }
 .player-card p { color: #666; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; position: relative; }
@@ -226,7 +226,7 @@ footer { background-color: var(--dark-bg); color: var(--text-light); padding: 3r
 .stats-box { display: flex; gap: 2rem; margin-top: 1.5rem; padding: 1rem; background: var(--light-bg); border-radius: 8px; }
 .stats-box .stat-item { flex: 1; text-align: center; }
 .stats-box .stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: var(--primary-color); font-family: 'Bebas Neue', cursive; }
-.stats-box .stat-label { display: block; font-size: 0.9rem; color: #666; margin-top: 0.5rem; }
+.stats-box .stat-label { display: block; font-size: 0.9rem; color: #fff; margin-top: 0.5rem; font-weight: 600; }
 
 .legacy-section { max-width: 900px; margin: 4rem auto 0; background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
 .legacy-section h3 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 2rem; text-align: center; }
@@ -251,7 +251,7 @@ footer { background-color: var(--dark-bg); color: var(--text-light); padding: 3r
 .player-stats-row { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
 .player-stat { flex: 1; text-align: center; padding: 1rem; background: var(--light-bg); border-radius: 8px; }
 .stat-num { display: block; font-size: 2.5rem; font-weight: 700; color: var(--primary-color); font-family: 'Bebas Neue', cursive; }
-.stat-label { display: block; font-size: 0.9rem; color: #666; margin-top: 0.3rem; }
+.stat-label { display: block; font-size: 0.9rem; color: #fff; margin-top: 0.3rem; font-weight: 600; }
 .player-achievements { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .achievement-badge { display: inline-block; padding: 0.5rem 1rem; background: var(--secondary-color); color: var(--dark-bg); border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
 .team-spirit { max-width: 900px; margin: 4rem auto 0; background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-top: 5px solid var(--secondary-color); }
@@ -285,7 +285,7 @@ footer { background-color: var(--dark-bg); color: var(--text-light); padding: 3r
 .stat-box { text-align: center; padding: 2rem 1rem; background: var(--light-bg); border-radius: 10px; transition: var(--transition); }
 .stat-box:hover { background: white; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
 .stat-box .stat-number { font-size: 3rem; font-weight: 700; color: var(--primary-color); font-family: 'Bebas Neue', cursive; }
-.stat-box .stat-label { display: block; font-size: 0.9rem; color: #666; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+.stat-box .stat-label { display: block; font-size: 0.9rem; color: #fff; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
 /* form.css */
 
@@ -347,7 +347,7 @@ footer { background-color: var(--dark-bg); color: var(--text-light); padding: 3r
 .user-stats h4 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: var(--secondary-color); }
 .stat-display { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; }
 .stat-item { text-align: center; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; backdrop-filter: blur(10px); }
-.stat-label { display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; opacity: 0.9; }
+.stat-label { display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; opacity: 0.9; color: #fff; font-weight: 600; }
 .stat-value { display: block; font-size: 2.5rem; font-weight: 700; color: var(--secondary-color); font-family: 'Bebas Neue', cursive; }
 .comparison-chart { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem; }
 .comparison-chart h4 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem; text-align: center; }
