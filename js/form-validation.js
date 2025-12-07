@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fieldsToValidate.forEach(fieldName => {
         const field = document.getElementById(fieldName);
         if (field) {
-            // Blur esemény (mezőről való kilépés)
             field.addEventListener('blur', function() {
                 validateField(fieldName, this.value);
             });
@@ -138,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Checkbox validálás
+
     const termsCheckbox = document.getElementById('terms');
     if (termsCheckbox) {
         termsCheckbox.addEventListener('change', function() {
@@ -146,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Űrlap beküldése
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -193,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Hírlevél:', document.getElementById('newsletter').checked);
                 console.log('Feltételek elfogadva:', termsCheckbox.checked);
             } else {
-                // Görgetés az első hibás mezőhöz
                 const firstError = document.querySelector('.error');
                 if (firstError) {
                     firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -201,10 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-
-        // Reset gomb kezelése
         form.addEventListener('reset', function() {
-            // Kis késleltetés után törölni az összes error/success osztályt
             setTimeout(function() {
                 const inputs = form.querySelectorAll('input, select, textarea');
                 inputs.forEach(input => {
@@ -216,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     msg.textContent = '';
                 });
 
-                // Range slider visszaállítása
                 if (fanLevelInput && fanLevelValue) {
                     fanLevelValue.textContent = '5';
                 }

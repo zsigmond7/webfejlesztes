@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+﻿document.addEventListener('DOMContentLoaded', function() {
     const goldenTeamPlayers = [
         { name: 'Puskás Ferenc', goals: 84, matches: 85 },
         { name: 'Kocsis Sándor', goals: 75, matches: 68 },
@@ -103,17 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const rowClass = player.isUser ? 'user-rank' : '';
             
             rankingHTML += `
-                <div class="ranking-item ${rowClass}">
-                    <div class="ranking-position">${position}</div>
-                    <div class="ranking-info">
-                        <div class="ranking-name">${player.name}</div>
-                        <div class="ranking-stats">${player.goals} gól • ${player.matches} mérkőzés</div>
+                    <div class="ranking-item ${rowClass}">
+                        <div class="ranking-position">${position}</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">${player.name}</div>
+                            <div class="ranking-stats">${player.goals} gól  ${player.matches} mérkőzés</div>
+                        </div>
+                        <div class="ranking-average">${player.average}</div>
                     </div>
-                    <div class="ranking-average">${player.average}</div>
-                </div>
             `;
         });
-        
+
         rankingContainer.innerHTML = rankingHTML;
     }
 
