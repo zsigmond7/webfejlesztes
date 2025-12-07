@@ -1,0 +1,6 @@
+Csonka Zsigmond Ernő
+https://zsigmond7.github.io/webfejlesztes/
+A weboldal, amit készítettem az Aranycsapatról történelméről szól.
+3 javascript fájl található. Navigation.js a navigációs fül és a hamburger menü kezeléséhez van. form-validation.js az űrlap validálásáért felel. Calculator.js felel a calculator.html oldalon látható interaktív saját statisztika összehasonlító programért.
+https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto Ezt a fontot használtam a legtöbb HTML oldalnál
+Aranycsapat wikipédia, W3School, AI segítséget használtam a CSS és a javascriptnél.

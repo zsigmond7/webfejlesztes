@@ -1,17 +1,14 @@
-// Űrlap validációs szabályok és függvények
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     const fanLevelInput = document.getElementById('fanLevel');
     const fanLevelValue = document.getElementById('fanLevelValue');
 
-    // Range slider érték megjelenítése
     if (fanLevelInput) {
         fanLevelInput.addEventListener('input', function() {
             fanLevelValue.textContent = this.value;
         });
     }
 
-    // Validációs függvények
     const validators = {
         firstName: function(value) {
             if (value.trim().length < 2) {
@@ -127,9 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 validateField(fieldName, this.value);
             });
 
-            // Input esemény (gépelés közben)
             field.addEventListener('input', function() {
-                // Csak akkor validálunk gépelés közben, ha már volt hiba
                 if (this.classList.contains('error')) {
                     validateField(fieldName, this.value);
                 }
@@ -149,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Összes mező validálása
             let isValid = true;
 
             fieldsToValidate.forEach(fieldName => {
@@ -159,26 +153,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Terms checkbox validálás
             if (termsCheckbox && !validateField('terms', termsCheckbox.checked, true)) {
                 isValid = false;
             }
 
-            // Ha minden mező valid, akkor "beküldés"
             if (isValid) {
-                // Űrlap elrejtése
                 form.style.display = 'none';
                 
-                // Sikeres üzenet megjelenítése
                 const successMessage = document.getElementById('successMessage');
                 if (successMessage) {
                     successMessage.style.display = 'block';
                 }
 
-                // Görgetés a sikeres üzenethez
+
                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-                // Konzolra kiírjuk az adatokat (teszteléshez)
                 console.log('Űrlap adatok:');
                 console.log('Keresztnév:', document.getElementById('firstName').value);
                 console.log('Vezetéknév:', document.getElementById('lastName').value);
